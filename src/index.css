@@ -1,0 +1,222 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  font-family: 'Gabarito', sans-serif;
+}
+.head{
+  padding: 10px;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  justify-content: space-between;
+  border-bottom: 1px solid #222;
+}
+.head__name h1{
+  color:violet ;
+}
+.head__search{
+  display: flex;
+  border: 2px solid black;
+  width: 40%;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px;
+  gap: 10px;
+}
+.head__search input{
+  width: 90%;
+  border: none;
+
+}
+.head__search input:focus{
+  background-color: blue;
+}
+.head__icons{
+  display: flex;
+  gap: 30px;
+  cursor: pointer;
+}
+.head__icons__icon{
+  display: flex;
+  gap: 10px;
+}
+.head__hide{
+  display: none;
+}
+
+.development{
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  cursor: pointer;
+ 
+  
+}
+.development p:hover{
+  background-color: white;
+  color: violet;
+  transition-duration: 1s;
+  border: 1px solid #222 ;
+}
+.development p{
+  background-color: violet;
+  border-radius: 20px;
+  padding: 10px;
+  margin-top: 10px;
+}
+.headline{
+  padding: 10px;
+}
+.image{
+  margin-top:10px;
+  border-top: 1px solid black;
+  position: relative;
+  
+}
+.image img{
+  width: 100%;
+}
+.box__animation{
+  border: 2px solid #222;
+  width: 35%;
+  position: absolute;
+  bottom: 62%;
+  left:10% ;
+  background-color: white;
+  padding: 10px;
+  animation-name: box__ani;
+  animation-duration: 2s;
+
+}
+.box__animation h1{
+  font-size: 20px;
+}
+.box__animation p{
+  font-size: 13px;
+}
+
+.course__card{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  cursor: pointer;
+  padding: 10px 0 0 10px;
+  
+}
+
+.course__card__details{
+  flex-grow: 1;
+  flex-basis: 10%;
+}
+.course__card__details img{
+  width: 96%;
+  height: 150px;
+}
+.course__card__details h1{
+  font-size: 18px;
+}
+.topics__topic{
+  margin:30px 0 0 10px
+}
+.topic{
+  margin: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  cursor: pointer;
+
+}
+.topic h3{
+  border: 1px solid #333;
+  flex-basis: 30%;
+  padding: 10px 0 10px 0;
+  transition-duration: 2s;
+  text-align: center;
+  flex-grow: 1;
+
+}
+.topic h3:hover{
+  background-color: #222;
+  color: white;
+}
+
+.fooder{
+  width: 100%;
+  background-color: #111;
+  color: #fff;
+  
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+}
+.fooder__right,.fooder__left{
+ margin: 30px 0 20px 30px;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+.copyright{
+  width: 100%;
+  background-color: #111;
+  color: #fff;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.copyright h1{
+  
+  margin:30px 0 50px 30px ;
+}
+.copyright p{
+  margin-right: 50px;
+  font-size: 13px;
+}
+
+
+@keyframes box__ani {
+  0%{
+      transform: scale(0);
+  }
+  100%{
+      transform: scale(1);
+  }
+}
+
+@media screen and (max-width:768px){
+  .head__search,.head__icons,.development{
+      display: none;
+  } 
+  
+  .head__hide{
+      display: flex;
+  }.image{
+      margin-top: 0;
+      border-top: 0;
+  }
+
+  .topic h3{
+      flex-basis: 40%;
+  }
+  .course__card__details{
+      flex-basis: 40%;
+  }
+  .box__animation{
+      width: 35%;
+      bottom: 80%;
+      padding:5px 5px 5px 5px;
+      border: 1px solid #333;
+  }
+  .box__animation h1{
+      font-size: 10px;
+  }
+  .box__animation p{
+      font-size: 6px;
+  }
+  
+}
